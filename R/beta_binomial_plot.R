@@ -9,9 +9,6 @@
 #' library(ggplot2)
 #' beta_binomial_plot(a=1, b=1)
 #' beta_binomial_plot(a=1, b=1, x=5, n=10, posterior=TRUE)
-#' 
-
-
 
 beta_binomial_plot <- function(a, b, x=NULL, n=NULL, posterior=FALSE, summary=TRUE, ...){
     if(posterior==TRUE & (is.null(x) | is.null(n))) stop('Specify your data x and n')
