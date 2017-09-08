@@ -1,0 +1,55 @@
+# Homework ????
+
+**NAME:**  ????
+
+\
+\
+\
+\
+
+
+
+## EXERCISE 1
+
+### Part a
+
+
+```{r}
+#If the exercise requires computing, put your code here
+```
+
+
+### Part b
+
+If the exercise requires a (right-justified) table:
+
+       Column 1        Column 2        Column 3
+--------------- --------------- ---------------
+              a               b               c
+              d               e               f
+
+
+
+\
+\
+
+
+
+## EXERCISE 2
+
+### Part a
+
+
+
+### Part b
+
+
+
+
+
+
+        
+
+
+
+
