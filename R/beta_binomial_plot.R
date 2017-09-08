@@ -5,6 +5,7 @@
 #' @param x,n Observed number of successes & trials
 #' @param posterior logical; if TRUE, the posterior pdf is drawn
 #' @param summary logical; if TRUE, the prior/posterior mean, median, and variance are printed
+#' @export
 #' @examples
 #' library(ggplot2)
 #' beta_binomial_plot(a=1, b=1)
