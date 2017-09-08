@@ -1,16 +1,15 @@
 #' Visualize a Beta-Binomial model
 #'
-#' You can use this function to visualize & summarize key features of the prior and posterior pdfs for a Beta-Binomial model.
+#' Visualize & summarize key features of the prior and posterior pdfs for a Beta-Binomial model.
 #' @param a,b Shape parameters of the Beta prior (Beta(a,b))
 #' @param x,n Observed number of successes & trials
 #' @param posterior logical; if TRUE, the posterior pdf is drawn
 #' @param summary logical; if TRUE, the prior/posterior mean, median, and variance are printed
-#' @export
 #' @examples
 #' library(ggplot2)
 #' beta_binomial_plot(a=1, b=1)
 #' beta_binomial_plot(a=1, b=1, x=5, n=10, posterior=TRUE)
-
+#' @export
 beta_binomial_plot <- function(a, b, x=NULL, n=NULL, posterior=FALSE, summary=TRUE, ...){
     if(posterior==TRUE & (is.null(x) | is.null(n))) stop('Specify your data x and n')
     
