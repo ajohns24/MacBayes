@@ -23,5 +23,4 @@ You can use this function to visualize & summarize key features of the prior and
 library(ggplot2)
 beta_binomial_plot(a=1, b=1)
 beta_binomial_plot(a=1, b=1, x=5, n=10, posterior=TRUE)
-
 }
