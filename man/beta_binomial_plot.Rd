@@ -17,7 +17,7 @@ beta_binomial_plot(a, b, x = NULL, n = NULL, posterior = FALSE,
 \item{summary}{logical; if TRUE, the prior/posterior mean, median, and variance are printed}
 }
 \description{
-You can use this function to visualize & summarize key features of the prior and posterior pdfs for a Beta-Binomial model.
+Visualize & summarize key features of the prior and posterior pdfs for a Beta-Binomial model.
 }
 \examples{
 library(ggplot2)
