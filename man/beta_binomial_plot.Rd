@@ -4,8 +4,7 @@
 \alias{beta_binomial_plot}
 \title{Visualize a Beta-Binomial model}
 \usage{
-beta_binomial_plot(a, b, x = NULL, n = NULL, posterior = FALSE,
-  summary = TRUE, ...)
+beta_binomial_plot(a, b, x = NULL, n = NULL, posterior = FALSE)
 }
 \arguments{
 \item{a, b}{Shape parameters of the Beta prior (Beta(a,b))}
@@ -13,8 +12,6 @@ beta_binomial_plot(a, b, x = NULL, n = NULL, posterior = FALSE,
 \item{x, n}{Observed number of successes & trials}
 
 \item{posterior}{logical; if TRUE, the posterior pdf is drawn}
-
-\item{summary}{logical; if TRUE, the prior/posterior mean, median, and variance are printed}
 }
 \description{
 Visualize & summarize key features of the prior and posterior pdfs for a Beta-Binomial model.
