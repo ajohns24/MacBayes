@@ -1,7 +1,7 @@
 Package: MacBayes
 Title: Introductory Bayesian toolkit
 Version: 0.0.0.9000
-Authors@R: person(“Alicia”, “Johnson”, email = “ajohns24@macalester.edu”, role = c("aut", "cre"))
+Authors@R: person("Alicia", "Johnson", email = "ajohns24@macalester.edu", role = c("aut", "cre"))
 Description: This package was developed for an introductory Bayesian Statistics course at Macalester College.
 Imports:
     ggplot2
