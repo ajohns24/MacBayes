@@ -17,7 +17,6 @@ beta_binomial_summary(a, b, x = NULL, n = NULL, posterior = FALSE)
 Summarize key features of the prior and posterior pdfs for a Beta-Binomial model.
 }
 \examples{
-library(ggplot2)
 beta_binomial_summary(a=1, b=1)
 beta_binomial_summary(a=1, b=1, x=5, n=10, posterior=TRUE)
 }
