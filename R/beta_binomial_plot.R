@@ -17,7 +17,7 @@ beta_binomial_plot <- function(a, b, x=NULL, n=NULL, posterior=FALSE, summary=TR
     gprior <- ggplot(NULL,aes(x=c(0,1))) + 
         stat_function(fun=dbeta, args=list(shape1=a, shape2=b)) +
         stat_function(fun=dbeta, args=list(shape1=a, shape2=b), geom="ribbon", fill="cyan4", alpha=0.5, mapping = aes(ymin=0, ymax=..y..)) + 
-        labs(x="p", y="pdf")
+        labs(x="p", y="pdf") + ...
     
     if(posterior==FALSE){
         print(gprior)
