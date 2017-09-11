@@ -5,7 +5,6 @@
 #' @param x,n Observed number of successes & trials
 #' @param posterior logical; if TRUE, the posterior pdf is summarized
 #' @examples
-#' library(ggplot2)
 #' beta_binomial_summary(a=1, b=1)
 #' beta_binomial_summary(a=1, b=1, x=5, n=10, posterior=TRUE)
 #' @export
