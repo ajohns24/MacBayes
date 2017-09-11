@@ -14,7 +14,7 @@ beta_binomial_plot(a, b, x = NULL, n = NULL, posterior = FALSE)
 \item{posterior}{logical; if TRUE, the posterior pdf is drawn}
 }
 \description{
-Visualize & summarize key features of the prior and posterior pdfs for a Beta-Binomial model.
+Visualize key features of the prior and posterior pdfs for a Beta-Binomial model.
 }
 \examples{
 library(ggplot2)
