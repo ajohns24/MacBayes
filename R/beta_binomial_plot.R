@@ -1,6 +1,6 @@
 #' Visualize a Beta-Binomial model
 #'
-#' Visualize & summarize key features of the prior and posterior pdfs for a Beta-Binomial model.
+#' Visualize key features of the prior and posterior pdfs for a Beta-Binomial model.
 #' @param a,b Shape parameters of the Beta prior (Beta(a,b))
 #' @param x,n Observed number of successes & trials
 #' @param posterior logical; if TRUE, the posterior pdf is drawn
