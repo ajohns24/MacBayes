@@ -4,20 +4,18 @@
 \alias{beta_binomial_plot}
 \title{Visualize a Beta-Binomial model}
 \usage{
-beta_binomial_plot(a, b, x = NULL, n = NULL, posterior = FALSE)
+beta_binomial_plot(a, b, x = NULL, n = NULL)
 }
 \arguments{
 \item{a, b}{Shape parameters of the Beta prior (Beta(a,b))}
 
-\item{x, n}{Observed number of successes & trials}
-
-\item{posterior}{logical; if TRUE, the posterior pdf is drawn}
+\item{x, n}{Observed number of successes & trials, respectively}
 }
 \description{
-Visualize key features of the prior and posterior pdfs for a Beta-Binomial model.
+Visualize the prior and posterior pdfs for a Beta-Binomial model.
 }
 \examples{
 library(ggplot2)
 beta_binomial_plot(a=1, b=1)
-beta_binomial_plot(a=1, b=1, x=5, n=10, posterior=TRUE)
+beta_binomial_plot(a=1, b=1, x=5, n=10)
 }

@@ -4,14 +4,12 @@
 \alias{beta_binomial_summary}
 \title{Summarize features of a Beta-Binomial model}
 \usage{
-beta_binomial_summary(a, b, x = NULL, n = NULL, posterior = FALSE)
+beta_binomial_summary(a, b, x = NULL, n = NULL)
 }
 \arguments{
 \item{a, b}{Shape parameters of the Beta prior (Beta(a,b))}
 
 \item{x, n}{Observed number of successes & trials}
-
-\item{posterior}{logical; if TRUE, the posterior pdf is summarized}
 }
 \description{
 Summarize the parameters, mean, mode, & variance of the prior and posterior pdfs for a Beta-Binomial model.
