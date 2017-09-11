@@ -3,15 +3,14 @@
 #' Summarize the parameters, mean, mode, & variance of the prior and posterior pdfs for a Beta-Binomial model.
 #' @param a,b Shape parameters of the Beta prior (Beta(a,b))
 #' @param x,n Observed number of successes & trials
-#' @param posterior logical; if TRUE, the posterior pdf is summarized
 #' @examples
 #' beta_binomial_summary(a=1, b=1)
 #' beta_binomial_summary(a=1, b=1, x=5, n=10, posterior=TRUE)
 #' @export
-beta_binomial_summary <- function(a, b, x=NULL, n=NULL, posterior=FALSE){
-    if(posterior==TRUE & (is.null(x) | is.null(n))) stop('Specify your data x and n')
+beta_binomial_summary <- function(a, b, x=NULL, n=NULL){
+    if(is.null(x) | is.null(n)) warning('To summarize the posterior, specify data x and n')
 
-    if(posterior==FALSE){
+    if(is.null(x) & is.null(n)){
         prior_mean <- a/(a+b)
         prior_mode <- (a-1)/(a+b-2)
         prior_var  <- a*b/((a+b)^2*(a+b+1))
