@@ -14,7 +14,7 @@ beta_binomial_summary(a, b, x = NULL, n = NULL, posterior = FALSE)
 \item{posterior}{logical; if TRUE, the posterior pdf is summarized}
 }
 \description{
-Summarize key features of the prior and posterior pdfs for a Beta-Binomial model.
+Summarize the parameters, mean, mode, & variance of the prior and posterior pdfs for a Beta-Binomial model.
 }
 \examples{
 beta_binomial_summary(a=1, b=1)
