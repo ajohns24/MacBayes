@@ -14,7 +14,7 @@ beta_binomial_plot <- function(a, b, x=NULL, n=NULL){
     #prior pdf
     gprior <- ggplot(NULL,aes(x=c(0,1))) +
         stat_function(fun=dbeta, args=list(shape1=a, shape2=b)) +
-        stat_function(fun=dbeta, args=list(shape1=a, shape2=b), geom="ribbon", fill="cyan4", alpha=0.5, mapping = aes(ymin=0, ymax=..y..)) +
+        stat_function(fun=dbeta, args=list(shape1=a, shape2=b), geom="ribbon", fill="gold1", alpha=0.5, mapping = aes(ymin=0, ymax=..y..)) +
         labs(x="p", y="pdf")
 
     if(is.null(x) & is.null(n)){
@@ -26,7 +26,7 @@ beta_binomial_plot <- function(a, b, x=NULL, n=NULL){
         #posterior pdf
         gpost <- gprior +
             stat_function(fun=dbeta, args=list(shape1=a+x, shape2=b+n-x)) +
-            stat_function(fun=dbeta, args=list(shape1=a+x, shape2=b+n-x), geom="ribbon", fill="gold1", alpha=0.5, mapping = aes(ymin=0, ymax=..y..)) +
+            stat_function(fun=dbeta, args=list(shape1=a+x, shape2=b+n-x), geom="ribbon", fill="cyan4", alpha=0.5, mapping = aes(ymin=0, ymax=..y..)) +
             geom_vline(xintercept=x/n, color="red")
         #plot posterior
         gpost
