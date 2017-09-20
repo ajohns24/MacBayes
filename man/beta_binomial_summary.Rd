@@ -16,5 +16,5 @@ Summarize the parameters, mean, mode, & variance of the prior and posterior pdfs
 }
 \examples{
 beta_binomial_summary(a=1, b=1)
-beta_binomial_summary(a=1, b=1, x=5, n=10, posterior=TRUE)
+beta_binomial_summary(a=1, b=1, x=5, n=10)
 }
