@@ -2,3 +2,5 @@
 
 export(beta_binomial_plot)
 export(beta_binomial_summary)
+export(poisson_gamma_plot)
+export(poisson_gamma_summary)
