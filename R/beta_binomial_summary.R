@@ -5,7 +5,7 @@
 #' @param x,n Observed number of successes & trials
 #' @examples
 #' beta_binomial_summary(a=1, b=1)
-#' beta_binomial_summary(a=1, b=1, x=5, n=10, posterior=TRUE)
+#' beta_binomial_summary(a=1, b=1, x=5, n=10)
 #' @export
 beta_binomial_summary <- function(a, b, x=NULL, n=NULL){
     if(is.null(x) | is.null(n)) warning('To summarize the posterior, specify data x and n')
