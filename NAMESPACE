@@ -2,5 +2,7 @@
 
 export(beta_binomial_plot)
 export(beta_binomial_summary)
+export(matrix_power)
 export(poisson_gamma_plot)
 export(poisson_gamma_summary)
+export(running_mean_plot)
