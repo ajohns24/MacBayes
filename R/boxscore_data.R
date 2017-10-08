@@ -10,18 +10,18 @@
 #'
 #' @format A data.frame with 50 observations on 12 variables.
 #'   \itemize{
-#'     \item{code{"AQ1"}}{Home Team A score at the end of the 1st quarter [numeric]}
-#'     \item{code{"AQ2"}}{Home Team A score at the end of the 2nd quarter [numeric]}
-#'     \item{code{"AQ3"}}{Home Team A score at the end of the 3rd quarter [numeric]}
-#'     \item{code{"AQ4"}}{Home Team A score at the end of the 4th quarter [numeric]}
-#'     \item{code{"BQ1"}}{Opponent score at the end of the 1st quarter [numeric]}
-#'     \item{code{"BQ2"}}{Opponent score at the end of the 2nd quarter [numeric]}
-#'     \item{code{"BQ3"}}{Opponent score at the end of the 3rd quarter [numeric]}
-#'     \item{code{"BQ4"}}{Opponent score at the end of the 4th quarter [numeric]}
-#'     \item{code{"Diff1"}}{Score differential at the end of the 1st quarter [numeric]}
-#'     \item{code{"Diff2"}}{Score differential at the end of the 2nd quarter [numeric]}
-#'     \item{code{"Diff3"}}{Score differential at the end of the 3rd quarter [numeric]}
-#'     \item{code{"Diff4"}}{Score differential at the end of the 4th quarter [numeric]}
+#'     \item{AQ1}{Home Team A score at the end of the 1st quarter [numeric]}
+#'     \item{AQ2}{Home Team A score at the end of the 2nd quarter [numeric]}
+#'     \item{AQ3}{Home Team A score at the end of the 3rd quarter [numeric]}
+#'     \item{AQ4}{Home Team A score at the end of the 4th quarter [numeric]}
+#'     \item{BQ1}{Opponent score at the end of the 1st quarter [numeric]}
+#'     \item{BQ2}{Opponent score at the end of the 2nd quarter [numeric]}
+#'     \item{BQ3}{Opponent score at the end of the 3rd quarter [numeric]}
+#'     \item{BQ4}{Opponent score at the end of the 4th quarter [numeric]}
+#'     \item{Diff1}{Score differential at the end of the 1st quarter [numeric]}
+#'     \item{Diff2}{Score differential at the end of the 2nd quarter [numeric]}
+#'     \item{Diff3}{Score differential at the end of the 3rd quarter [numeric]}
+#'     \item{Diff4}{Score differential at the end of the 4th quarter [numeric]}
 #'   }
 #'
 #' @source simulation
