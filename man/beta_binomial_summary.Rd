@@ -4,10 +4,10 @@
 \alias{beta_binomial_summary}
 \title{Summarize features of a Beta-Binomial model}
 \usage{
-beta_binomial_summary(a, b, x = NULL, n = NULL)
+beta_binomial_summary(alpha, beta, x = NULL, n = NULL)
 }
 \arguments{
-\item{a, b}{Shape parameters of the Beta prior (Beta(a,b))}
+\item{alpha, beta}{Shape parameters of the Beta prior (Beta(alpha,beta))}
 
 \item{x, n}{Observed number of successes & trials}
 }
@@ -15,6 +15,6 @@ beta_binomial_summary(a, b, x = NULL, n = NULL)
 Summarize the parameters, mean, mode, & variance of the prior and posterior pdfs for a Beta-Binomial model.
 }
 \examples{
-beta_binomial_summary(a=1, b=1)
-beta_binomial_summary(a=1, b=1, x=5, n=10)
+beta_binomial_summary(alpha = 1, beta = 1)
+beta_binomial_summary(alpha = 1, beta = 1, x = 5, n = 10)
 }
