@@ -1,31 +1,34 @@
 #' Summarize features of a Beta-Binomial model
 #'
 #' Summarize the parameters, mean, mode, & variance of the prior and posterior pdfs for a Beta-Binomial model.
-#' @param a,b Shape parameters of the Beta prior (Beta(a,b))
+#' @param alpha,beta Shape parameters of the Beta prior (Beta(alpha,beta))
 #' @param x,n Observed number of successes & trials
 #' @examples
-#' beta_binomial_summary(a=1, b=1)
-#' beta_binomial_summary(a=1, b=1, x=5, n=10)
+#' beta_binomial_summary(alpha = 1, beta = 1)
+#' beta_binomial_summary(alpha = 1, beta = 1, x = 5, n = 10)
 #' @export
-beta_binomial_summary <- function(a, b, x=NULL, n=NULL){
+beta_binomial_summary <- function(alpha, beta, x=NULL, n=NULL){
     if(is.null(x) | is.null(n)) warning('To summarize the posterior, specify data x and n')
-
+	
+	beta_mean <- function(a, b){a / (a + b)}
+	beta_mode <- function(a, b){(a-1) / (a+b-2)}
+	beta_var <- function(a, b){a*b/((a+b)^2*(a+b+1))}
+	
+	prior_mean <- beta_mean(alpha, beta)
+    prior_mode <- beta_mode(alpha, beta)
+    prior_var  <- beta_var(alpha, beta)
+        
     if(is.null(x) & is.null(n)){
-        prior_mean <- a/(a+b)
-        prior_mode <- (a-1)/(a+b-2)
-        prior_var  <- a*b/((a+b)^2*(a+b+1))
-        return(data.frame(model=c("prior"), a=a, b=b, mean=prior_mean, mode=prior_mode, var=prior_var))
+        return(data.frame(model=c("prior"), alpha = alpha, beta = beta, mean=prior_mean, mode=prior_mode, var=prior_var))
     }
 
     else{
-        prior_mean <- a/(a+b)
-        prior_mode <- (a-1)/(a+b-2)
-        prior_var  <- a*b/((a+b)^2*(a+b+1))
-        post_mean  <- (x+a)/(n+a+b)
-        post_mode <- (x+a-1)/(n+a+b-2)
-        post_var   <- (x+a)*(n-x+b)/((n+a+b)^2*(n+a+b+1))
-        post_a <- x+a
-        post_b <- n-x+b
-        return(data.frame(model=c("prior","posterior"), a=c(a,post_a), b=c(b,post_b), mean=c(prior_mean,post_mean), mode=c(prior_mode,post_mode), var=c(prior_var,post_var)))
+        post_alpha <- x+alpha
+        post_beta <- n-x+ beta
+        post_mean <- beta_mean(post_alpha, post_beta)
+    	post_mode <- beta_mode(post_alpha, post_beta)
+	    post_var  <- beta_var(post_alpha, post_beta)
+    
+        return(data.frame(model=c("prior","posterior"), alpha=c(alpha,post_alpha), beta =c(beta,post_beta), mean=c(prior_mean,post_mean), mode=c(prior_mode,post_mode), var=c(prior_var,post_var)))
     }
 }
